@@ -1,0 +1,6 @@
+if [ -w $1 ]
+then
+	echo file have write permission
+else
+	echo file do not have write permission
+fi

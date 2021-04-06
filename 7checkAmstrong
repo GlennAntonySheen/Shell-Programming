@@ -1,0 +1,15 @@
+read -p 'Enter a number: ' num
+amg=0
+numCopy=$num
+
+for ((;num>0;num=$((num / 10)))) do
+	tmp=$((num % 10))
+	amg=$((amg + $((tmp * tmp * tmp))))
+done
+
+if [ $amg -eq $numCopy ] 
+then 
+	echo $numCopy is amstrong
+else
+	echo $numCopy is not amstrong
+fi

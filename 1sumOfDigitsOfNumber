@@ -1,0 +1,12 @@
+sum=0
+
+echo Enter a number: 
+read num
+
+for (( ; $num>0 ; ))
+do
+	sum=`expr $sum + $num % 10`
+	num=`expr $num / 10`
+done
+
+echo Sum of digits is $sum

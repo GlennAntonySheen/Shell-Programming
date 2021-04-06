@@ -1,0 +1,9 @@
+read -p 'Enter a number: ' num
+revNumber=0
+
+for ((;num>0;num/=10)) do
+	revNumber=`expr $revNumber \* 10`
+	revNumber=`expr $revNumber + $((num % 10))`
+done
+
+echo Reverse is $revNumber
